@@ -10,18 +10,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
     <nav class="main-navigation">
       <ul>
         <li>
           <a href="index.html">Home</a>
         </li>
         <li>
-          <a href="about.html">About Me</a>
+          <a href="about.html">About</a>
         </li>
         <li>
-          <a href="contact.html" class="active">Contact Me</a>
+          <a href="contact.html" class="active">Contact</a>
         </li>
       </ul>
     </nav>
+  </header>
+  <main>
+      <form action="https://formspree.io/fm8846@wayne.edu" method="POST" data-validate>
+        <div>
+          <label for="name">Name
+            <input id="name" type="text" name="name" class="form-input">
+          </label>
+        </div>
+
+        <div>
+          <label for="email">Email
+            <input id="email" type="email" name="_replyto" class="form-input" required>
+          </label>
+        </div>
+
+        <div>
+          <label for="message">Message
+            <textarea id="message" name="message" class="form-input" required></textarea>
+          </label>
+        </div>
+
+        <div>
+          <button type="submit">Send</button>
+        </div>
+
+        <input type="hidden" name="_next" value="thanks.html" />
+        <input type="hidden" name="_subject" value="Email from Class Project!" />
+        <input type="text" name="_gotcha" style="display:none" />
+      </form>
+  </main>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/validate@2.2.0/dist/validate.min.js"></script>
+  <script>
+    validate.init();
+  </script>
 </body>
 </html>
